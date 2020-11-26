@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+    font-family: Arial;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    height: 100%;
+}
+
+#prova{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header{
+    width: 100%;
+    height: 140px;
+    margin-top: 0px;
+    background-color: black;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header h1{
+    font-size: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 75%;
+    height: 35px;
+    margin: 0 auto;    
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 150%;
+    padding: 4px 102.5px;
+}
+
+nav a:hover{
+    color: white;
+    background-color: black;
+}
+
+#all{
+    background-color: dimgray;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slideshow{
+    margin-top: 165px;
+}
+
+.imgslidershow img{
+    width: 100%;
+}
+
+#acts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#acts article{
+    width: 300px;
+    height: 200px;
+}
+
+#acts article h2{
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
+}
+
+#acts article img{
+    width: 100%;
+    height: 150px;
+}
+
+#info{
+    width: 75%;
+    margin: 20px auto;
+}
+
+#info article{
+    background-color: antiquewhite;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+#info p{
+    padding: 20px;
+}
+
+#contacte{
+    width: 40%;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacte h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contacte table tr th{
+    padding: 10px 15px;
+}
+
+#contacte table tr td{
+    padding: 10px 15px;
+    text-align: center;
+}
+
+#mapa{
+    margin: 15px auto;
+}
+
+#mapa h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#mapa iframe{
+    border-radius: 7px;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    display: block;
+}
+
+#formulari{
+    width: 500px;
+    height: 500px;
+    margin-top: 200px;
+}
+
+form{
+    border: 3px solid black;
+/*    position: relative;*/
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+footer p{
+    margin: 7px auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer img{
+    height: 30px;
+    margin: 2px 2px;
+}

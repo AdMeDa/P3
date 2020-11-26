@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacte</title>
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+
+<body>
+
+    <div id="prova">
+
+        <header>
+            <a href="index.html">
+                <h1>VELMEL GYM</h1>
+            </a>
+        </header>
+
+        <nav>
+            <a href="index.html">Inici</a>
+            <a href="qui.html">Qui sóm?</a>
+            <a href="contacte.html">Contacte</a>
+            <a href="modificar.html">Modificar</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </div>
+
+    <div id="all">
+      <div class="slideshow">
+
+                <div class="imgslidershow">
+                    <img src="img/img1.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img2.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img3.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img4.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img5.jpg">
+                </div>
+
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("imgslidershow");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 3000); // Change image every 2 seconds
+                }
+
+            </script>
+            
+            <div id="contacte">           
+                <h2>Informació de contacte:</h2>
+
+                <table border="5">
+                    <tr>
+                        <th>Teléfon</th>
+                        <td>973 30 88 79</td>
+                    </tr>
+                    <tr>
+                        <th>Correu</th>
+                        <td>velmelgym@info.cat</td>
+                    </tr>
+                    <tr>
+                        <th>Instagram</th>
+                        <td>velmel gym</td>
+                    </tr>
+                    <tr>
+                        <th>Facebook</th>
+                        <td>velmel gym</td>
+                    </tr>
+                </table>
+             
+            
+                <div id="mapa">
+
+                <h2>Ubicació:</h2>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.809970684884!2d2.208850915348448!3d41.44334480048741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bc970494fd35%3A0x8964a7e72cfe5aa2!2sAv.%20de%20la%20Generalitat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1606243582018!5m2!1ses!2ses" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                </div>
+            </div>
+
+    </div>
+
+    <footer>
+        <p>Av. Generalitat 14</p>
+        <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+        <a href="https://es-es.facebook.com/" target="_blank"><img src="img/Facebook-logo.png" alt="Facebook"></a>
+    </footer>
+
+</body>
+
+</html>
