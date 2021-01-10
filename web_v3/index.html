@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Gym</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/estils.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+
+        <div id="prova">
+
+            <header>
+                <a href="index.html">   
+                <h1>VELMEL GYM</h1>
+                </a>
+            </header>
+
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-list2"></span>VELMEL GYM</a>
+            </div>
+
+            <nav id="nav_mobil">
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="qui.html">Qui sóm?</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="modificar.html">Modificar</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <script>
+            $(document).ready(main);
+
+            var contador = 1;
+
+                function main () {
+                    $('.menu_bar').click(function(){
+                        if (contador == 1) {
+                            $('#nav_mobil').animate({
+                                left: '0'
+                            });
+                            contador = 0;
+                        } else {
+                            contador = 1;
+                            $('#nav_mobil').animate({
+                                left: '-100%'
+                            });
+                        }
+                    });
+                }
+            </script>
+
+            <nav id="nav_pc">
+                <a href="index.html">Inici</a>
+                <a href="qui.html">Qui sóm?</a>
+                <a href="contacte.html">Contacte</a>
+                <a href="modificar.html">Modificar</a>
+                <a href="login.html">Login</a>
+            </nav>
+
+        </div>
+
+        <div id="all">
+
+            <div class="slideshow">
+
+                <div class="imgslidershow">
+                    <img src="img/img1.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img2.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img3.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img4.jpg">
+                </div>
+
+                <div class="imgslidershow">
+                    <img src="img/img5.jpg">
+                </div>
+
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("imgslidershow");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 3000); // Change image every 2 seconds
+                }
+            </script>
+
+            <section id="acts">
+
+                <article>
+                    <h2>Entrenament personal</h2>
+                    <img src="img/personalt-trainer-1259x787.jpg" alt="Entrenament personal">
+                </article>
+
+                <article>
+                    <h2>Spinning</h2>
+                    <img src="img/spinning_monitor.jpg" alt="Spinning">
+                </article>
+
+                <article>
+                    <h2>Pilates</h2>
+                    <img src="img/pilates-t.jpg" alt="Pilates">
+                </article>
+
+                <article>
+                    <h2>Zumba</h2>
+                    <img src="img/zumba.jpg" alt="Zumba">
+                </article>
+
+                <article>
+                    <h2>Box de crossfit</h2>
+                    <img src="img/crossfit.jpg" alt="Box de crossfit">
+                </article>
+
+                <article>
+                    <h2>Body Combat</h2>
+                    <img src="img/bodycombat-studioform3.jpg" alt="Body Combat">
+                </article>
+
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Av. Generalitat 14</p>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="https://es-es.facebook.com/" target="_blank"><img src="img/Facebook-logo.png" alt="Facebook"></a>
+        </footer>
+
+    </body>
+
+</html>
