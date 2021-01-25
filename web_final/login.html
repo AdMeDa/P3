@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Gym</title>
+        <link rel="stylesheet" href="link/font-awesom.min.css">
+        <link rel="stylesheet" href="css/estils.css">
+        <script src="link/jquery-latest.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+
+        <div id="prova">
+
+            <header>
+                <a href="index.html">   
+                    <h1>VELMEL GYM</h1>
+                </a>
+            </header>
+
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-list2"></span>VELMEL GYM</a>
+            </div>
+
+            <nav id="nav_mobil">
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="qui.html">Qui sóm?</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="modificar.php">Modificar</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <script>
+                $(document).ready(main);
+
+                var contador = 1;
+
+                function main () {
+                    $('.menu_bar').click(function(){
+                        if (contador == 1) {
+                            $('#nav_mobil').animate({
+                                left: '0'
+                            });
+                            contador = 0;
+                        } else {
+                            contador = 1;
+                            $('#nav_mobil').animate({
+                                left: '-100%'
+                            });
+                        }
+                    });
+                }
+            </script>
+
+            <nav id="nav_pc">
+                <a href="index.html">Inici</a>
+                <a href="qui.html">Qui sóm?</a>
+                <a href="contacte.html">Contacte</a>
+                <a href="modificar.html">Modificar</a>
+                <a href="login.html">Login</a>
+            </nav>
+
+        </div>
+
+        <div id="all">
+           
+            <section id="sformulari">
+
+                <h2>Benvolgut soci:</h2>
+
+                <div id="formulari">
+
+                    <form action="logincd.php" method="post">
+
+                        <label for="DNI/NIE">DNI o NIE:</label>
+                        <input type="text" placeholder="Introdueix el teu DNI o NIE" name="txtusuario">
+
+                        <label for="contrassenya">Contrassenya:</label>
+                        <input type="password" placeholder="*********" required class="field" name="txtpassword">
+
+                        <div id="botof">
+                            <input type="submit" value="Envia">
+                            <input type="reset" name="netejar" id="netejar" value="Netejar formulari">
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Av. Generalitat 14</p>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+            <a href="https://es-es.facebook.com/" target="_blank"><img src="img/Facebook-logo.png" alt="Facebook"></a>
+        </footer>
+
+        <script src="./Menu Lateral - Dispositivos Moviles_files/jquery-latest.js.descarga"></script>
+        <script src="./Menu Lateral - Dispositivos Moviles_files/menu.js.descarga"></script>
+
+    </body>
+
+</html>
